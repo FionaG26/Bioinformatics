@@ -28,24 +28,81 @@ bioinformatics/
 
 ## 🔬 Features
 
-- **FASTA & FASTQ parsing**  
-  Cleanly read biological sequences and quality scores
+🧬 Sequence Analysis
+Parse and process FASTA & FASTQ files
 
-- **Regex-based motif detection**  
-  Find motifs like `TATA[AT]A[AT]` in promoter regions
+Identify open reading frames (ORFs) and translation products
 
-- **Variant parsing from VCF**  
-  Extract and filter SNPs, indels, and genotypes
+Detect DNA motifs using regular expressions (e.g., TATA boxes)
 
-- **Gene annotation parsing**  
-  Load and explore gene features from GTF/GFF files
+Generate k-mer frequencies for pattern recognition or feature engineering
 
-- **k-mer frequency analysis**  
-  Build frequency dictionaries of short DNA patterns
+Perform GC content analysis using sliding window methods
 
-- **Sliding window GC content plots**  
-  Visualize GC% along genome or contig regions
+Validate sequence quality, base composition, and sequence lengths
 
+🧠 Gene Expression & Transcriptomics
+Load and normalize gene expression matrices (TPM, CPM, FPKM)
+
+Identify differentially expressed genes (DEGs)
+
+Perform principal component analysis (PCA) and clustering
+
+Generate volcano plots, heatmaps, and boxplots
+
+Parse GTF/GFF3 annotation files for gene, exon, transcript mapping
+
+🧬 Variant Analysis & Population Genomics
+Parse VCF files for SNPs, indels, and genotype data
+
+Filter variants by quality, position, or allele frequency
+
+Annotate variants with gene or functional impact
+
+Perform basic haplotype structure or mutation spectrum analysis
+
+🧪 Data Wrangling & Feature Engineering
+Clean, merge, and reshape high-throughput omics data (Pandas/Numpy)
+
+Build custom features from sequence data for machine learning models
+
+Integrate multiple datasets (e.g., sequence + metadata + phenotype)
+
+📊 Data Visualization
+Create interactive plots with Matplotlib, Seaborn, and Plotly
+
+Generate GC content and k-mer frequency plots
+
+Visualize clustering, dimensionality reduction, and expression patterns
+
+Build dashboards or notebooks to showcase project insights
+
+🧠 Machine Learning in Biology
+Train models to classify disease vs control, tissue types, or phenotypes
+
+Use algorithms like logistic regression, SVM, random forests, and KNN
+
+Perform cross-validation, ROC analysis, and feature importance ranking
+
+Apply unsupervised learning (PCA, t-SNE, k-means) to high-dimensional omics data
+
+Explore AI for genomic prediction, variant classification, and biomarker discovery
+
+⚙️ Workflow Automation & Reproducibility
+Batch-process files using shell scripts or Python loops
+
+Create modular analysis pipelines for automation
+
+Export results to CSV/Excel or generate reproducible Jupyter reports
+
+Track and document code versions using Git/GitHub
+
+🌐 External Database Integration
+Query NCBI, Ensembl, UniProt, or GEO for sequences and annotations
+
+Automate data downloads via REST APIs or command-line tools (e.g., wget, Entrez)
+
+Map gene IDs using BioMart or biomaRt (in R)
 ---
 
 ## 💻 Requirements
