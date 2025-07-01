@@ -9,10 +9,10 @@ Welcome to my **Bioinformatics** repository — a collection of scripts, noteboo
 ```
 
 bioinformatics/
-├── fasta\_parser.py           # Read and parse FASTA sequences
-├── fastq\_quality\_checker.py  # Analyze FASTQ quality scores
-├── vcf\_parser.py             # Extract and analyze variants from VCF files
-├── gtf\_annotation\_parser.py  # Parse gene/exon annotations from GTF
+├── parser.py           # Read and parse FASTA sequences
+├── checker.py  # Analyze FASTQ quality scores
+├── parser.py             # Extract and analyze variants from VCF files
+├── annotation\_parser.py  # Parse gene/exon annotations from GTF
 ├── kmer\_counter.py           # Generate k-mer frequencies from DNA sequences
 ├── gc\_content\_plot.py        # GC content analysis using sliding window
 ├── motif\_finder.py           # Detect motifs like TATA boxes using regex
