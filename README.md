@@ -16,10 +16,10 @@ bioinformatics/
 ├── kmer\_counter.py           # Generate k-mer frequencies from DNA sequences
 ├── gc\_content\_plot.py        # GC content analysis using sliding window
 ├── motif\_finder.py           # Detect motifs like TATA boxes using regex
-├── example\_sequence.fasta    # Sample FASTA input
 ├── notebooks/
 │   ├── sequence\_analysis.ipynb   # Jupyter notebook for interactive analysis
 │   └── motif\_visualization.ipynb
+├── example\_sequence.fasta    # Sample FASTA input
 └── README.md                 # You're here!
 
 ````
@@ -28,108 +28,85 @@ bioinformatics/
 
 ## 🔬 Features
 
-🧬 Sequence Analysis
-Parse and process FASTA & FASTQ files
+This repository includes core tools and scripts used across **bioinformatics**, **computational biology**, and **biomedical data science** workflows:
 
-Identify open reading frames (ORFs) and translation products
+### 🧬 Sequence Analysis
+- Parse and process **FASTA** & **FASTQ** files
+- Identify **open reading frames (ORFs)** and translation products
+- Detect **DNA motifs** using regex (e.g., TATA boxes)
+- Generate **k-mer frequencies** for pattern recognition
+- Perform **GC content analysis** using sliding windows
+- Validate sequence quality and composition
 
-Detect DNA motifs using regular expressions (e.g., TATA boxes)
+### 🧠 Gene Expression & Transcriptomics
+- Load and normalize gene expression data (TPM, CPM, FPKM)
+- Identify **differentially expressed genes (DEGs)**
+- Perform **PCA** and **hierarchical clustering**
+- Generate **volcano plots**, **heatmaps**, and **boxplots**
+- Parse **GTF/GFF3** files for gene, exon, and transcript features
 
-Generate k-mer frequencies for pattern recognition or feature engineering
+### 🧬 Variant Analysis & Population Genomics
+- Parse and filter **VCF** files for SNPs, indels, and genotypes
+- Annotate variants with gene and functional impact
+- Explore haplotype structure and mutation signatures
 
-Perform GC content analysis using sliding window methods
+### 🧪 Data Wrangling & Feature Engineering
+- Merge and reshape omics datasets using **Pandas/Numpy**
+- Engineer features from sequence data for ML models
+- Integrate sequence + metadata + phenotype for analysis
 
-Validate sequence quality, base composition, and sequence lengths
+### 📊 Data Visualization
+- Create plots with **Matplotlib**, **Seaborn**, and **Plotly**
+- Plot GC content, k-mer frequencies, and sequence features
+- Visualize dimensionality reduction (PCA, t-SNE)
+- Build interactive notebooks for result exploration
 
-🧠 Gene Expression & Transcriptomics
-Load and normalize gene expression matrices (TPM, CPM, FPKM)
+### 🤖 Machine Learning in Biology
+- Classify disease vs control using **SVM, logistic regression, random forest**
+- Perform **feature selection** and interpret model outputs
+- Apply **unsupervised clustering** and **embedding techniques**
+- Build ML-ready datasets from biological inputs
 
-Identify differentially expressed genes (DEGs)
+### ⚙️ Workflow Automation & Reproducibility
+- Batch-process genomic files via Python and shell
+- Modularize pipelines for repeatable analysis
+- Export results to CSV/Excel or Jupyter Notebooks
+- Track code history with Git/GitHub
 
-Perform principal component analysis (PCA) and clustering
+### 🌐 External Database Integration
+- Fetch sequences/annotations from NCBI, Ensembl, UniProt, GEO
+- Automate queries using Entrez or REST APIs
+- Convert IDs using BioMart or Ensembl tools
 
-Generate volcano plots, heatmaps, and boxplots
-
-Parse GTF/GFF3 annotation files for gene, exon, transcript mapping
-
-🧬 Variant Analysis & Population Genomics
-Parse VCF files for SNPs, indels, and genotype data
-
-Filter variants by quality, position, or allele frequency
-
-Annotate variants with gene or functional impact
-
-Perform basic haplotype structure or mutation spectrum analysis
-
-🧪 Data Wrangling & Feature Engineering
-Clean, merge, and reshape high-throughput omics data (Pandas/Numpy)
-
-Build custom features from sequence data for machine learning models
-
-Integrate multiple datasets (e.g., sequence + metadata + phenotype)
-
-📊 Data Visualization
-Create interactive plots with Matplotlib, Seaborn, and Plotly
-
-Generate GC content and k-mer frequency plots
-
-Visualize clustering, dimensionality reduction, and expression patterns
-
-Build dashboards or notebooks to showcase project insights
-
-🧠 Machine Learning in Biology
-Train models to classify disease vs control, tissue types, or phenotypes
-
-Use algorithms like logistic regression, SVM, random forests, and KNN
-
-Perform cross-validation, ROC analysis, and feature importance ranking
-
-Apply unsupervised learning (PCA, t-SNE, k-means) to high-dimensional omics data
-
-Explore AI for genomic prediction, variant classification, and biomarker discovery
-
-⚙️ Workflow Automation & Reproducibility
-Batch-process files using shell scripts or Python loops
-
-Create modular analysis pipelines for automation
-
-Export results to CSV/Excel or generate reproducible Jupyter reports
-
-Track and document code versions using Git/GitHub
-
-🌐 External Database Integration
-Query NCBI, Ensembl, UniProt, or GEO for sequences and annotations
-
-Automate data downloads via REST APIs or command-line tools (e.g., wget, Entrez)
-
-Map gene IDs using BioMart or biomaRt (in R)
 ---
 
 ## 💻 Requirements
 
-- Python 3.7+
-- Libraries:
+- Python 3.12
+- Recommended libraries:
   - `re` (built-in)
   - `matplotlib`
+  - `pandas`
+  - `seaborn`
   - `collections`
-  - `pandas` *(optional for some notebooks)*
+  - `numpy`
 
 Install dependencies:
 ```bash
-pip install matplotlib pandas
+pip install matplotlib pandas seaborn numpy
 ````
 
 ---
 
 ## 🚀 Usage
 
-### Example: Run k-mer analysis
+### Run k-mer analysis:
 
 ```bash
 python kmer_counter.py --input example_sequence.fasta --k 4
 ```
 
-### Example: Detect motifs
+### Find motifs like TATA box:
 
 ```bash
 python motif_finder.py --input example_sequence.fasta --pattern "TATA[AT]A[AT]"
@@ -139,18 +116,19 @@ python motif_finder.py --input example_sequence.fasta --pattern "TATA[AT]A[AT]"
 
 ## 📚 Learning Resources
 
-* [NCBI](https://www.ncbi.nlm.nih.gov/)
-* [Biopython](https://biopython.org/)
-* [Ensembl GTF format](https://www.ensembl.org/info/website/upload/gff.html)
-* [Rosalind Exercises](http://rosalind.info)
+* [Biopython Docs](https://biopython.org/)
+* [Ensembl File Formats](https://www.ensembl.org/info/website/upload/index.html)
+* [Rosalind Practice](http://rosalind.info)
+* [GEO Datasets](https://www.ncbi.nlm.nih.gov/geo/)
+* [NCBI Tools](https://www.ncbi.nlm.nih.gov/tools/)
 
 ---
 
 ## 👩‍💻 Author
 
 **Fiona Githaiga**
-Software Developer & Molecular Biologist
-| 🧪 Precision Medicine | 💻 Data-Driven Research
+Molecular Biologist | Software Developer | Bioinformatics Enthusiast
+| Precision Medicine | Data-Driven Discovery
 
-Let’s connect!
-[LinkedIn](https://www.linkedin.com/in/fiona-githaiga-3282aa194/) | [GitHub](https://github.com/FionaG26)
+Connect with me:
+[LinkedIn]([https://linkedin.com/infiona-githaiga-3282aa194] | [GitHub](https://github.com/FionaG26)
