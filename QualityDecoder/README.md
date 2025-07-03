@@ -89,6 +89,6 @@ This project is licensed under the MIT License. Feel free to fork and modify!
 
 ## 👩‍🔬 Created By
 
-Fiona Githaiga | [@pythonqueen](https://github.com/FionaG26)
+Fiona Githaiga | [@pythonqueen](https://qualitydecoder-rvg83pedhrwzqxkmqdvmjs.streamlit.app/))
 
 ---
