@@ -83,7 +83,8 @@ By default, the app will run on `http://localhost:5000` as defined in `.streamli
 
 ## 📄 License
 
-License | (https://github.com/FionaG26/Bioinformatics/blob/main/QualityDecoder/LICENSE)
+This project is licensed under the [MIT License](https://github.com/FionaG26/Bioinformatics/blob/main/QualityDecoder/LICENSE).  
+You are free to use, modify, and distribute it with proper attribution.
 
 ---
 
