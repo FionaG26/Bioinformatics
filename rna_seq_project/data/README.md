@@ -1,62 +1,106 @@
-🧬 RNA-Seq Project: Differential Gene Expression in Tumor vs Normal Tissue
-🎯 Project Overview
-This RNA-Seq project aims to compare gene expression profiles between tumor and normal tissue samples in human colon tissue. The goal is to identify differentially expressed genes (DEGs) that may contribute to tumorigenesis and uncover the biological pathways they impact.
+# 🧬 RNA-Seq Analysis Project: Tumor vs Normal Tissue
 
-We will use raw FASTQ files as input and process them through a complete RNA-Seq analysis pipeline—including quality control, trimming, alignment, quantification, differential expression analysis, and functional enrichment.
+## 📌 Project Description
 
-📚 Glossary of Key Terms & Steps
-🔬 Quality Control (QC)
-Definition: Inspection of raw sequencing reads to assess data quality and detect issues such as low-quality scores, GC bias, adapter contamination, or overrepresented sequences.
+In this project, we analyze RNA-Seq data to identify differentially expressed genes (DEGs) between **tumor** and **normal** tissue samples. The objective is to understand molecular changes in cancer and uncover potential biomarkers or therapeutic targets.
 
-🧰 Tools: FastQC, MultiQC
-📌 Why: High-quality input ensures reliable downstream analysis.
+### 🔬 Workflow Overview
 
-✂️ Trimming
-Definition: Removal of adapter sequences and low-quality bases from raw reads.
+The analysis pipeline involves:
 
-🧰 Tool: Trimmomatic
-📌 Why: Improves mapping accuracy and reduces alignment artifacts.
+1. **Quality Control (QC)** of raw FASTQ files
+2. **Trimming** of low-quality bases and adapters
+3. **Read Alignment** to a reference genome
+4. **Expression Quantification** at the gene level
+5. **Differential Expression Analysis** to detect DEGs
+6. **Functional Enrichment Analysis** to explore biological significance
 
-🎯 Alignment
-Definition: Mapping trimmed reads to a reference genome (e.g., GRCh38/hg38) to determine their genomic origin.
+---
 
-🧰 Tool: HISAT2
-📌 Why: Essential for identifying which genes the RNA fragments come from.
+## 📚 Glossary of Key Terms
 
-📊 Expression Quantification
-Definition: Counting reads that align to genes or transcripts to estimate expression levels.
+### FASTQ File
+A text-based format for storing both a biological sequence (usually nucleotide) and its corresponding quality scores.
 
-🧰 Tool: featureCounts
-📌 Why: Read counts reflect gene activity and are used for downstream comparisons.
+### Quality Control (QC)
+A step to assess the quality of raw sequencing data. Common QC tools include:
 
-📈 Differential Expression Analysis (DEA)
-Definition: Statistical comparison of expression levels between tumor and normal samples to identify DEGs.
+- **FastQC**: generates per-base quality statistics
+- **MultiQC**: aggregates reports across samples
 
-🧰 Tool: DESeq2
-📌 Why: Highlights genes that may be involved in disease or therapeutic response.
+### Trimming
+The process of removing adapter sequences and low-quality bases from reads using tools like **Trimmomatic** or **Cutadapt**.
 
-🧠 Functional Enrichment Analysis
-Definition: Identifying enriched biological processes, molecular functions, and pathways among the DEGs.
+### Alignment
+Mapping sequencing reads to a reference genome using aligners such as:
 
-🧰 Tool: clusterProfiler
-📌 Why: Adds biological meaning to the list of DEGs—e.g., highlighting cancer-related pathways.
+- **HISAT2**: a fast and sensitive alignment tool
+- **STAR**: another high-performance RNA-seq aligner
 
-📁 FASTQ Files
-Definition: Text-based files containing raw sequencing reads and associated quality scores.
+### Expression Quantification
+Counting how many reads map to each gene using tools like:
 
-📌 Why: The foundational data for RNA-Seq analysis.
+- **featureCounts**
+- **HTSeq**
+- **Salmon/Kallisto** (for lightweight, alignment-free quantification)
 
-📊 Volcano Plot
-Definition: A scatter plot visualizing significance (p-value) vs fold change of gene expression.
+### TPM / FPKM / RPKM
+Methods for normalizing gene expression levels:
+- **TPM** (Transcripts Per Million)
+- **FPKM** (Fragments Per Kilobase Million)
+- **RPKM** (Reads Per Kilobase Million)
 
-📌 Why: Helps quickly identify the most relevant DEGs.
+### Differential Expression Analysis (DEA)
+Statistical testing to determine genes that are significantly upregulated or downregulated between two conditions (e.g., tumor vs normal).
 
-🔥 Heatmap
-Definition: A color-coded matrix showing expression levels of selected genes across multiple samples.
+- Tool: **DESeq2**, **edgeR**, or **limma-voom**
+- Output: log2 fold changes and adjusted p-values
 
-📌 Why: Highlights clustering patterns, such as clear separation between tumor and normal groups.
+### Log2 Fold Change
+Measures the magnitude of change in gene expression on a log base 2 scale. A value of +2 means 4x higher expression.
 
-📍 Principal Component Analysis (PCA)
-Definition: A statistical method for visualizing sample variation and clustering based on expression data.
+### Adjusted p-value / False Discovery Rate (FDR)
+Corrects for multiple testing. An adjusted p-value < 0.05 indicates significant differential expression.
 
-📌 Why: Confirms whether tumor and normal samples form distinct biological groups.
+### Volcano Plot
+A scatter plot that displays both the magnitude of change (log2 fold change) and statistical significance (−log10 p-value) for each gene.
+
+### Heatmap
+A color-coded grid showing gene expression patterns across samples. Useful for visualizing clusters of upregulated/downregulated genes.
+
+### PCA (Principal Component Analysis)
+A dimensionality reduction technique that shows how samples group based on gene expression patterns.
+
+### Functional Enrichment Analysis
+Identifies biological functions, pathways, or gene sets enriched in the list of DEGs.
+
+#### Gene Ontology (GO)
+A framework for classifying gene function into:
+- **Biological Processes**
+- **Cellular Components**
+- **Molecular Functions**
+
+#### KEGG Pathway
+A collection of pathway maps representing known molecular interactions and reaction networks.
+
+#### clusterProfiler
+An R package used to perform statistical analysis and visualization of functional profiles.
+
+---
+
+## 📁 Suggested Tools and Libraries
+
+| Step | Tool |
+|------|------|
+| Quality Control | FastQC, MultiQC |
+| Trimming | Trimmomatic |
+| Alignment | HISAT2, STAR |
+| Quantification | featureCounts, Salmon |
+| DEA | DESeq2 |
+| Enrichment | clusterProfiler |
+
+---
+
+## 🧪 Outcome
+
+This project will yield a ranked list of differentially expressed genes and their associated pathways—offering insights into molecular drivers of tumor biology.
