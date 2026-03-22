@@ -1,4 +1,4 @@
-# ===================== FINAL SCRIPT: 2D & 3D VISUALIZATION + GIF =====================
+# ===================== IMPORT PACKAGES =====================
 import subprocess
 import sys
 import os
